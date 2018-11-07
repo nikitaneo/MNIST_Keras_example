@@ -1,12 +1,8 @@
 FROM continuumio/miniconda3:4.5.11
 
 RUN pip install --no-cache-dir notebook==5.*
-RUN apt-get update && apt-get install --assume-yes apt-utils
-RUN apt install htop
-RUN conda update -n base conda
-RUN conda install -c anaconda numpy
-RUN conda install -c conda-forge tensorflow
-RUN conda install -c conda-forge keras
+RUN pip install tensorflow
+RUN pip install keras
 
 ENV NB_USER student
 ENV NB_UID 1000
