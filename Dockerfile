@@ -2,7 +2,7 @@ FROM continuumio/miniconda3
 
 RUN apt-get update && apt-get install --assume-yes apt-utils
 RUN apt install htop
-RUN apt install pip
+RUN apt install python-pip
 RUN pip install --no-cache-dir notebook==5.*
 RUN conda update -n base conda
 RUN conda install -c anaconda numpy
