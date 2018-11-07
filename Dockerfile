@@ -1,4 +1,4 @@
-FROM continuumio/miniconda3
+FROM continuumio/miniconda3:4.5.11
 
 RUN apt-get update && apt-get install --assume-yes apt-utils
 RUN apt-get install --assume-yes python-pip
