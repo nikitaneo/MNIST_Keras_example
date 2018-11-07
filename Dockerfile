@@ -1,11 +1,11 @@
 FROM continuumio/miniconda3:4.5.11
 
 RUN apt-get update && apt-get install --assume-yes apt-utils
-RUN pip install --upgrade pip
-RUN pip install --no-cache-dir notebook==5.*
-RUN pip install numpy
-RUN pip install tensorflow
-RUN pip install keras
+RUN pip3 install --upgrade pip
+RUN pip3 install --no-cache-dir notebook==5.*
+RUN pip3 install numpy
+RUN pip3 install tensorflow
+RUN pip3 install keras
 
 ENV NB_USER student
 ENV NB_UID 1000
