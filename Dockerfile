@@ -1,9 +1,9 @@
 FROM continuumio/miniconda3
 
 RUN apt-get update && apt-get install --assume-yes apt-utils
-RUN apt install htop
-RUN apt install python-pip
+RUN apt-get install --assume-yes python-pip
 RUN pip install --no-cache-dir notebook==5.*
+RUN apt install htop
 RUN conda update -n base conda
 RUN conda install -c anaconda numpy
 RUN conda install -c conda-forge tensorflow
